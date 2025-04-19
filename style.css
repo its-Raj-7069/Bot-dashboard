@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+/* LOGO FRAME */
+.logo-frame {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #9f7aea, #a855f7);
+  box-shadow: 0 0 25px #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* BOT NAME */
+.bot-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #c299ff;
+  text-shadow: 0 0 8px #a855f7;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #c0c0c0;
+  max-width: 500px;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* BUTTON STYLES */
+.btn-invite,
+.btn-support {
+  padding: 0.9rem;
+  background: #9e6eff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(158, 110, 255, 0.4);
+}
+
+.btn-support {
+  background: #333f5f;
+  box-shadow: 0 8px 18px rgba(80, 120, 200, 0.3);
+}
+
+.btn-invite:hover,
+.btn-support:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* WAVES */
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: #c299ff;
+  opacity: 0.6;
+  border-radius: 43%;
+  animation: wave 6s infinite linear;
+}
+
+.wave2 {
+  opacity: 0.3;
+  animation: wave 9s infinite linear reverse;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .bot-name {
+    font-size: 1.8rem;
+  }
+  .desc {
+    font-size: 0.95rem;
+  }
+  .btn-group {
+    width: 100%;
+  }
+}
